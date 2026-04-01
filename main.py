@@ -1,3 +1,4 @@
+import threading
 #1--
 
 # def son(a):
@@ -57,3 +58,26 @@ text = input("tekst kiriting: ")
 print(soz(text))
 
 #7--
+
+t1 = threading.Thread(target=task1)
+t2 = threading.Thread(target=task2)
+t3 = threading.Thread(target=task3)
+t5 = threading.Thread(target=task5)
+t6 = threading.Thread(target=task6)
+
+
+t1.start()
+t2.start()
+t3.start()
+t5.start()
+t6.start()
+
+
+t1.join()
+t2.join()
+t3.join()
+t4.join()
+t5.join()
+t6.join()
+
+
